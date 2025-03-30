@@ -1,60 +1,60 @@
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     color: #333;
-    text-align: center;
 }
 
 header {
-    margin-top: 50px;
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
-.fade-in {
-    animation: fadeIn 2s ease-in-out;
+main {
+    padding: 20px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 1rem;
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
     color: #fff;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    animation: bounce 2s infinite;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
